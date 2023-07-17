@@ -2,6 +2,7 @@ const complimentBtn = document.getElementById("complimentButton");
 const fortuneBtn = document.getElementById("fortuneButton");
 const customInput = document.getElementById("customFortune");
 const deleteInput = document.getElementById("deleteButton");
+const taylorSwiftLyrics = document.getElementById("taylorButton");
 
 const getCompliment = () => {
   axios.get("http://localhost:4000/api/compliment/").then((res) => {
@@ -45,7 +46,15 @@ const deleteButton = () => {
     });
 };
 
+const getLyric = () => {
+  axios.get("http://localhost:4000/api/lyric/").then((res) => {
+    const data = res.data;
+    alert(data);
+  });
+};
+
 complimentBtn.addEventListener("click", getCompliment);
 fortuneBtn.addEventListener("click", getFortune);
 customInput.addEventListener("submit", createCustomFortune);
 deleteInput.addEventListener("click", deleteButton);
+taylorSwiftLyrics.addEventListener("click", getLyric);

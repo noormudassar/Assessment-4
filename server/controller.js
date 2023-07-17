@@ -43,4 +43,20 @@ module.exports = {
     }
     res.sendStatus(400);
   },
+
+  getLyric: (req, res) => {
+    let lyrics = [
+      "The rest of the world was black and white, but we were in screaming color.",
+      "I'm so in love that I might stop breathing.",
+      "Darling, I fancy you",
+      "He was sunshine, I was midnight rain.",
+      "Did you think we'd be fine? Still got scars in my back from your knives.",
+      "He's so obsessed with me and, boy, I understand.",
+      "Welcome to New York, it's been waitin' for you.",
+    ];
+    let randomIndex = Math.floor(Math.random() * lyrics.length);
+    let randomLyric = lyrics[randomIndex];
+
+    res.status(200).send(randomLyric);
+  },
 };
