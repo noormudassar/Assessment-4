@@ -44,7 +44,7 @@ module.exports = {
     res.sendStatus(400);
   },
 
-  getLyric: (req, res) => {
+  getLyrics: (req, res) => {
     let lyrics = [
       "The rest of the world was black and white, but we were in screaming color.",
       "I'm so in love that I might stop breathing.",

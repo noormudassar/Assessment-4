@@ -12,13 +12,13 @@ const {
   getFortune,
   createCustomFortune,
   deleteFortune,
-  getLyric,
+  getLyrics,
 } = require("./controller");
 
 app.get("/api/compliment", getCompliment);
 app.get("/api/fortune", getFortune);
-app.post("/api/fotune", createCustomFortune);
+app.post("/api/fortune", createCustomFortune);
 app.delete("/api/fortune", deleteFortune);
-app.get("/api/lyric", getLyric);
+app.get("/api/lyric", getLyrics);
 
 app.listen(4000, () => console.log("Server running on 4000"));
